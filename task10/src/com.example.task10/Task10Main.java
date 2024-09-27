@@ -12,7 +12,24 @@ public class Task10Main {
 
     static int numMin(int[] arr) {
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-        return 0;
+        if(arr.length == 0){
+            return 0;
+        }
+
+        int currentMinPos = 0;
+        int currentMin = arr[currentMinPos];
+
+        for(int i = 0; i < arr.length; i++){
+            if(currentMin == arr[i]){
+                currentMinPos = i;
+            }
+            else if(currentMin > arr[i]){
+                currentMin = arr[i];
+                currentMinPos = i;
+            }
+        }
+
+        return currentMinPos;
     }
 
 }
