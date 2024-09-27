@@ -15,7 +15,17 @@ public class Task09Main {
 
     static int min(int[] arr) {
         //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-        return 0;
+        if(arr.length < 0){
+            return 0;
+        }
+
+        int currentMin = arr[0];
+
+        for(int number : arr){
+            currentMin = Math.min(currentMin, number);
+        }
+
+        return currentMin;
     }
 
 }
